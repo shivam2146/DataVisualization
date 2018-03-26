@@ -11,11 +11,11 @@ def try1():
     pop = pd.Series([82569,1015785,485199])
     cp = pd.DataFrame({'City name':city,'Population':pop})
     print(cp)
-    #df = pd.read_csv("https://storage.googleapis.com/mledu-datasets/california_housing_train.csv", sep=",")
-    #print(df.describe())
-    #df.hist()
-    #pyplot.show()
-    #print(df.head())
+    df = pd.read_csv("https://storage.googleapis.com/mledu-datasets/california_housing_train.csv", sep=",")
+    print(df.describe())
+    df.hist()
+    pyplot.show()
+    print(df.head())
 
     #accessing data from dataframes using python dict style
     print(type(cp['City name']))
@@ -34,6 +34,6 @@ def try1():
     print(cp.index)
     print(cp.reindex([2,0,1]))
     print(cp.reindex(np.random.permutation(cp.index)))
-    
+
 if __name__ == '__main__':
     try1()
