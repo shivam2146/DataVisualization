@@ -16,6 +16,11 @@ def test():
     print("skew:",df["sepallength"].skew())
     print("kurt:",df["sepallength"].kurt())
 
+    #To descibe the dataframe
+    print(df.describe())
+    #To describe the data types of the columns in the data frame
+    print(df.info())
+
 
 
 
