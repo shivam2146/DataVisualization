@@ -6,6 +6,8 @@ def test():
     df = pd.read_csv(filename,skiprows=[1])
     #Good practice to drop null rows
     df = df.dropna()
+    #Good practice to drop duplicate rows
+    df = df.drop_duplicates()
     sl = df['sepallength']
     print("type df",type(df))
     print("type sepal_length",type(sl))
