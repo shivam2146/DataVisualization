@@ -6,6 +6,8 @@ def test():
     data = read_csv(filename,skiprows=[1])
     data.plot(kind="density",y="petallength");
     pyplot.show()
+    #To save the plot figure
+    pyplot.savefig('fig_data_plot.png')
 
 
 if __name__ == "__main__":
