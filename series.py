@@ -4,6 +4,8 @@ import numpy as np
 def test():
     filename= "iris.csv"
     df = pd.read_csv(filename,skiprows=[1])
+    #Good practice to drop null rows
+    df = df.dropna()
     sl = df['sepallength']
     print("type df",type(df))
     print("type sepal_length",type(sl))
